@@ -1,2 +1,2 @@
 # daspa
-A website for daspa!
+A website for Daspa!
