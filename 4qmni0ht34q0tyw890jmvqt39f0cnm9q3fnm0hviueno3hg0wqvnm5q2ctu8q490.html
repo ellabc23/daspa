@@ -69,6 +69,7 @@ body {font-family: Arial;}
    <button class="tablinks" onclick="openCity(event, 'Bundles')">Bundles</button>
    <button class="tablinks" onclick="openCity(event, 'Prices')">Prices</button>
    <button class="tablinks" onclick="openCity(event, 'chat')"></button>
+    <button class="tablinks" onclick="openCity(event, 'pictures')">Images</button>
 </div>
 <center>
 <div id="Home" class="tabcontent">
@@ -145,7 +146,7 @@ body {font-family: Arial;}
          Basic Package
         </b>
         <p>
-        The Basic Package is here for only fifty cents a night. Buy now and contact a member of our crew!
+        The Basic Package is here for only fifty cents a night. Buy and contact a member of our crew.
            </center>      
       <p>
        <p>
@@ -153,7 +154,7 @@ body {font-family: Arial;}
          Premium Package
         </b>
         <p>
-        The Premium Package is here for the deal-stealer of seventy-five cents a night! Buy this limited-edition package
+        The Premium Package is here for the deal-stealer of seventy-five cents a night! Buy this limited-edition package now
          and contact an esteemed member of our crew!
            </center>
      </font color>
@@ -161,6 +162,54 @@ body {font-family: Arial;}
 <div id="chat" class="tabcontent">
          Feedback coming soon
 
+                                </div>
+ <div id="pictures" class="tabcontent">
+         <div id="container">
+  <img id="image-to-vote-on" src="images/image_1.jpg">
+
+</div>
+<script>
+ var images= [
+  {
+    src:"https://images.fineartamerica.com/images/artworkimages/medium/1/abstract-purple-butterfly-watercolor-olga-shvartsur-transparent.png"
+  },
+  {
+    src:"http://s5.favim.com/orig/69/art-beautiful-bright-colorful-Favim.com-621427.jpg"
+  },  {
+    src:"https://previews.123rf.com/images/golubovy/golubovy1905/golubovy190500370/123340838-abstract-art-texture-background-ocean-storm-effect-beautiful-blue-and-white-acryl-paint-.jpg"
+  },
+   {
+    src:"https://i.pinimg.com/236x/03/0e/c5/030ec59f66f1846294d14bc9f8362361--backgrounds-cute-phone-backgrounds.jpg"
+  },
+     {
+    src:"https://cdn.shopify.com/s/files/1/0237/4325/products/beautifulgarden.JPG?v=1549527211"
+  },
+    {
+    src:"https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/2-sunset-over-ocean-boyan-dimitrov.jpg"
+  }
+]
+
+var index = 0;
+var nextIndex = [1, 2, 3, 4, 5, 0]
+
+setInterval(() => {
+  index = nextIndex[index];
+
+  // index = (index + 1) % images.length
+  
+  // if (index < images.length) {
+  //   index = index + 1
+  // } else {
+  //   index = 0
+  // }
+  
+  // index = index < images.length ? index + 1 : 0;
+
+  var imgEl = document.getElementById('image-to-vote-on');
+  imgEl.src = images[index].src
+  
+}, 1000)
+  </script>
                                 </div>
  </font color>
 <script>
